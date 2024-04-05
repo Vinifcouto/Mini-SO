@@ -8,3 +8,7 @@ Objetivo do SO:
 
 Ferramentas utilizadas:
   - O sistema será executado em um pendrive ou diskette, rodando em máquina real ou virtual.
+  - Serão utilizados o Nasm para manipulações em Assembly, o Fergo Raw para criação de arquivos de imagem e Rufus 3.9.
+  - Link do Nasm: https://www.nasm.us/pub/nasm/releasebuilds/2.14.03rc2/win64/
+  - Link do Fergo Raw: https://www.fergonez.net/softwares/fraw
+  - Link do Rufus: https://rufus.ie/downloads/
