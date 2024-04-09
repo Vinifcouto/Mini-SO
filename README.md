@@ -14,12 +14,16 @@ Ferramentas utilizadas:
   - Link do Rufus: https://rufus.ie/downloads/
   - Será utilizado também um editor chamado Notepad++
 
-Desenvolvimento:
+Desenvolvimento 1º aula:
   - Primeiramente fazemos o download do Nasm, do Fergo Raw e do Rufus 3.9. Em seguida, efetuamos a instalção do Nasm, inicializamos o Rufus 3.9 e extraimos o Zip do Fergo Raw. Entretanto, já encontramos um problema tentando abrir o arquivo extraído do Zip em questão. Aparece uma mensagem alegando que o componente "MSCOMCTL.OCX" ou uma de suas dependências não está corretamente registrada: um arquivo está faltando ou é inválido. Foi sugerido o uso de uma máquina virtual, porém os respectivos autores deste repositório não conseguiram solucionar ainda este problema. Evidentemente, será buscado uma solução futura para este problema.
   - Após a solução deste problema, deve-se configurar as variáveis de ambiente. Onde pegamos primeiramente o diretório do Nasm, abrimos as propriedades do computador e procuramos variáveis de ambiento no buscador e selecionamos o mesmo, posteriormente selecionamos a variável de sistema chamada de "path" e colamos o diretório do Nasm no campo chamado de "Valor da variável:" seguido de um clique no botão "ok". Após essa operação, feche as abas e abra o CMD e digite "nasm version" e será possível visualizar que agora o Nasm é uma variável de ambiente e poderá ser executada em qualquer lugar do computador.
   - Em seguida devemos organizar os arquivos do nosso SO, onde criamos uma pasta chamada "OSFiles" contendo outras duas pastas chamadas de "FergoRaw" e "Rufus", pasta essas que deverão conter as suas respectivas ferramentas detalhadas anteriormente.
   - Após isso, abrimos o editor Notepad++ para criar o BAT, onde executamos as instruções realizadas no vídeo. Por fim, no final do segundo vídeo o autor ensina como montar arquivos .ASM pelo Nasm.
   - No terceiro vídeo, é ensinado como baixar e instalar o Rufus 2.18 e máquina virtual da Oracle. O autor em seguida, mostra a execução e configuração do VirtualBox, a criação de uma máquina virtual e confuguração do USB. Por fim, o apresentador do vídeo demonstra como visualizar o número do pendrive pelo Windows e como gerar o arquivo .vmdk que conecta no USB. E por última instância, o autor revisa as configurações do VirtualBox.
+
+Desenvolvimento 2º aula:
+  - Como foi dito anteriormente, estávamos encontrando um problema na abertura na abertura do arquivo extraído do Fergo Raw. Felizmente, um colega de turma chamado Fabrício Pereira Diniz conseguiu resolver o problema,   
+
 
 Autores:
   -Emilaine Prado Correia Fagundes e Vinicius Ferreira Couto.
