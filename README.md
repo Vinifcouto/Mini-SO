@@ -67,5 +67,10 @@ Desenvolvimento 3ºaula:
   - Assim, podemos retornar ao Oracle VM VirtualBox para executar a máquina virtual, criamos ela a partir do botão novo selecionando a versão Windows 7 (64 bits), um tamanho recomendado de 2048 mb e, tudo isso, utilizando o disco rígido (pendrive) conectado, aqui cadastrado como usb.vmdk.
   - Após a criação, clique em iniciar, ou utilize a tecla T, e aguarde a exibição dos métodos de Hello World na sua tela!
 
+Resultado esperado:
+  - Assim, temos como resultado esperado a seguinte imagem:
+  
+  ![Texto Alternativo](https://i.ibb.co/dBx9ZLQ/Whats-App-Image-2024-05-07-at-12-48-41.jpg)  
+
 Autores:
   -Emilaine Prado Correia Fagundes, João Vitor de Souza Ribeiro e Vinicius Ferreira Couto.
