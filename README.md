@@ -47,6 +47,7 @@ Desenvolvimento 3ºaula:
   - Continuando o aplicado anteriormente, temos alguns passos para seguir:
       *-Instalar uma versão compatível do Rufus, a 2.18, disponível através do link https://rufus-portable.br.uptodown.com/windows/post-download/1678016.
       *-Instalar a VirtualBox, versão 5.2.44, disponível através do link https://www.virtualbox.org/wiki/Download_Old_Builds_5_2, clicando em "Windows hosts". Assim como na imagem:
+    
       ![Texto Alternativo](https://i.ibb.co/nLNwhVC/Captura-de-tela-2024-05-07-125008.png)
       *-Com isso, precisamos que a máquina virtual reconheça nosso pendrive usado, para isso, devemos utilizar linhas de comando no cmd:
       Linhas de comando    
