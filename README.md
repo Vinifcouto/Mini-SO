@@ -56,7 +56,8 @@ Desenvolvimento 3ºaula:
   - Utilizando a plataforma Notepad++, criamos um código inicial boot.asm para ser utilizado em nossa máquina virtual, o código pode ser conferido nos diretórios deste repositório.
   - Agora, com o código pronto, abrimos o FergoRaw, selecionamos como output um arquivo imagem a ser criado, com o nome System, como file, o código boot.bin, e adicionamos este a posição 1. Create file! Como demonstrado na seguinte imagem:
     ![Texto Alternativo](https://i.ibb.co/qJmGxhL/Captura-de-tela-2024-05-07-124738.png)
-  - Usamos, neste momento, o Rufus 2.18 para capturar essa imagem System e colocar dentro do pendrive, criando o disco botável em "Imagem DD".
+  - Usamos, neste momento, o Rufus 2.18 para capturar essa imagem System e colocar dentro do pendrive, criando o disco botável em "Imagem DD". Como demonstrado na imagem:
+    ![Texto Alternativo](https://i.ibb.co/VMnJwMQ/Captura-de-tela-2024-05-07-124916.png)
   - Importante ressaltar que, para gerar o boot.bin, devemos transformar boot.asm através do nasm, com o código no cmd:
         Linhas de comando
         1. nasm -f bin boot.asm -o boot.bin       
