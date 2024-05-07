@@ -21,9 +21,46 @@ Desenvolvimento 1º aula:
   - Após isso, abrimos o editor Notepad++ para criar o BAT, onde executamos as instruções realizadas no vídeo. Por fim, no final do segundo vídeo o autor ensina como montar arquivos .ASM pelo Nasm.
   - No terceiro vídeo, é ensinado como baixar e instalar o Rufus 2.18 e máquina virtual da Oracle. O autor em seguida, mostra a execução e configuração do VirtualBox, a criação de uma máquina virtual e confuguração do USB. Por fim, o apresentador do vídeo demonstra como visualizar o número do pendrive pelo Windows e como gerar o arquivo .vmdk que conecta no USB. E por última instância, o autor revisa as configurações do VirtualBox.
 
-Desenvolvimento 2º aula:
-  - Como foi dito anteriormente, estávamos encontrando um problema na abertura na abertura do arquivo extraído do Fergo Raw. Felizmente, um colega de turma chamado Fabrício Pereira Diniz conseguiu resolver o problema,   
 
+Desenvolvimento 2º aula:
+  - Como foi dito anteriormente, estávamos encontrando um problema na abertura do arquivo extraído do Fergo Raw. Felizmente, um colega de turma conseguiu resolver o problema, assim tornou-se possível que o FergoRaw funcionasse efetivamente. Dessa forma, foram seguidos os seguintes passos:
+    1 - O erro inicial (falta de registro do "MSCOMCTL.OCX") pôde ser solucionado com a instalação de uma biblioteca e uma ativação do tipo "Controle ActiveX", ambos foram encontrados em uma série de tutoriais disponíveis virtualmente, como no link: https://www.youtube.com/watch?v=ZSJnJULnrng; Em computadores com o sistema operacional de 64 bits, deve-se utilizar as seguintes linhas de comando, no cmd acessado como administrador:
+    Linhas de comando:
+    1. cd C:\Windows\SysWOW64
+    2. C:\Windows\SysWOW64 regsvr32 mscomctl.ocx
+    
+    Após a instalação da DLL através do cmd, utilize o instalador ascentive-library.
+
+    Os arquivos mencionados para essa solução estão disponíveis em: https://drive.google.com/drive/folders/1Me89gAlCFmDR34rhr4ZKV8aXrGuqkbcI?usp=sharing
+      
+    2 - Após a solução do primeiro erro, uma nova mensagem é exibida, agora indicando que o componente "COMDLG32.OCX" estaria ausente, assim, podemos resolver de maneira parecida com o anterior. O vídeo https://www.youtube.com/watch?v=_Fpp6lYpS-U traz uma boa explicação sobre como resolver esta questão, sendo necessário instalar um arquivo de ativação através do link https://web.archive.org/web/20190402051129/http://www.bioinformatics.org/snp-tools-excel/install_comdlg32.htm. Ao instalar o arquivo, em computadores com o sistema operacional de 64 bits, devemos transferir o documento até a pasta de origem "SysWOW64", após, deve-se utilizar as seguintes linhas de comando, no cmd acessado como administrador:
+    Linhas de comando:
+    1. cd C:\Windows\SysWOW64
+    2. C:\Windows\SysWOW64 regsvr32 comdlg32.ocx
+
+    Os arquivos mencionados para essa solução estão disponíveis em: https://drive.google.com/drive/folders/1gI9B59-HFAmwxaWLpeQTu-fW07-RxkaL?usp=sharing
+
+*Obs: caso seu computador tenha um sistema operacional de 32 bits, utilize o caminho C:\Windows\System32
+
+
+Desenvolvimento 3ºaula:
+  - Continuando o aplicado anteriormente, temos alguns passos para seguir:
+      *-Instalar uma versão compatível do Rufus, a 2.18, disponível através do link https://rufus-portable.br.uptodown.com/windows/post-download/1678016.
+      *-Instalar a VirtualBox, versão 5.2.44, disponível através do link https://www.virtualbox.org/wiki/Download_Old_Builds_5_2, clicando em "Windows hosts".
+      *-Com isso, precisamos que a máquina virtual reconheça nosso pendrive usado, para isso, devemos utilizar linhas de comando no cmd:
+             Linhas de comando    
+             1. cd %programfiles%\oracle\virtualbox
+             2. VBoxManage internalcommands createrawvmdk -filename       "%USERPROFILE%"\.VirtualBox\usb.vmdk -rawdisk \\.\PhysicalDrive [numero]
+  - Substitua o campo [numero] pelo número do disco.
+  - Agora crie sua máquina virtual com os dados desejados, selecionando a opção "Utilizar um disco rígido virtual existente", escolhemos o pendrive e confirmamos.
+  - Utilizando a plataforma Notepad++, criamos um código inicial boot.asm para ser utilizado em nossa máquina virtual, o código pode ser conferido nos diretórios deste repositório.
+  - Agora, com o código pronto, abrimos o FergoRaw, selecionamos como output um arquivo imagem a ser criado, com o nome System, como file, o código boot.bin, e adicionamos este a posição 1. Create file!
+  - Usamos, neste momento, o Rufus 2.18 para capturar essa imagem System e colocar dentro do pendrive, criando o disco botável em "Imagem DD".
+  - Importante ressaltar que, para gerar o boot.bin, devemos transformar boot.asm através do nasm, com o código no cmd:
+        Linhas de comando
+        1. nasm -f bin boot.asm -o boot.bin       
+  - Assim, podemos retornar ao Oracle VM VirtualBox para executar a máquina virtual, criamos ela a partir do botão novo selecionando a versão Windows 7 (64 bits), um tamanho recomendado de 2048 mb e, tudo isso, utilizando o disco rígido (pendrive) conectado, aqui cadastrado como usb.vmdk.
+  - Após a criação, clique em iniciar, ou utilize a tecla T, e aguarde a exibição dos métodos de Hello World na sua tela!
 
 Autores:
-  -Emilaine Prado Correia Fagundes e Vinicius Ferreira Couto.
+  -Emilaine Prado Correia Fagundes, João Vitor de Souza Ribeiro e Vinicius Ferreira Couto.
