@@ -42,7 +42,6 @@ Desenvolvimento 2º aula:
 
 *Obs: caso seu computador tenha um sistema operacional de 32 bits, utilize o caminho C:\Windows\System32
 
-![Texto Alternativo](https://i.ibb.co/qJmGxhL/Captura-de-tela-2024-05-07-124738.png)
 
 Desenvolvimento 3ºaula:
   - Continuando o aplicado anteriormente, temos alguns passos para seguir:
@@ -55,7 +54,8 @@ Desenvolvimento 3ºaula:
   - Substitua o campo [numero] pelo número do disco.
   - Agora crie sua máquina virtual com os dados desejados, selecionando a opção "Utilizar um disco rígido virtual existente", escolhemos o pendrive e confirmamos.
   - Utilizando a plataforma Notepad++, criamos um código inicial boot.asm para ser utilizado em nossa máquina virtual, o código pode ser conferido nos diretórios deste repositório.
-  - Agora, com o código pronto, abrimos o FergoRaw, selecionamos como output um arquivo imagem a ser criado, com o nome System, como file, o código boot.bin, e adicionamos este a posição 1. Create file!
+  - Agora, com o código pronto, abrimos o FergoRaw, selecionamos como output um arquivo imagem a ser criado, com o nome System, como file, o código boot.bin, e adicionamos este a posição 1. Create file! Como demonstrado na seguinte imagem:
+    ![Texto Alternativo](https://i.ibb.co/qJmGxhL/Captura-de-tela-2024-05-07-124738.png)
   - Usamos, neste momento, o Rufus 2.18 para capturar essa imagem System e colocar dentro do pendrive, criando o disco botável em "Imagem DD".
   - Importante ressaltar que, para gerar o boot.bin, devemos transformar boot.asm através do nasm, com o código no cmd:
         Linhas de comando
