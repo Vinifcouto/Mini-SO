@@ -42,6 +42,7 @@ Desenvolvimento 2º aula:
 
 *Obs: caso seu computador tenha um sistema operacional de 32 bits, utilize o caminho C:\Windows\System32
 
+![Texto Alternativo](https://i.ibb.co/qJmGxhL/Captura-de-tela-2024-05-07-124738.png)
 
 Desenvolvimento 3ºaula:
   - Continuando o aplicado anteriormente, temos alguns passos para seguir:
