@@ -48,9 +48,9 @@ Desenvolvimento 3ºaula:
       *-Instalar uma versão compatível do Rufus, a 2.18, disponível através do link https://rufus-portable.br.uptodown.com/windows/post-download/1678016.
       *-Instalar a VirtualBox, versão 5.2.44, disponível através do link https://www.virtualbox.org/wiki/Download_Old_Builds_5_2, clicando em "Windows hosts".
       *-Com isso, precisamos que a máquina virtual reconheça nosso pendrive usado, para isso, devemos utilizar linhas de comando no cmd:
-             Linhas de comando    
-             1. cd %programfiles%\oracle\virtualbox
-             2. VBoxManage internalcommands createrawvmdk -filename       "%USERPROFILE%"\.VirtualBox\usb.vmdk -rawdisk \\.\PhysicalDrive [numero]
+      Linhas de comando    
+      1. cd %programfiles%\oracle\virtualbox
+      2. VBoxManage internalcommands createrawvmdk -filename       "%USERPROFILE%"\.VirtualBox\usb.vmdk -rawdisk \\.\PhysicalDrive [numero]
   - Substitua o campo [numero] pelo número do disco.
   - Agora crie sua máquina virtual com os dados desejados, selecionando a opção "Utilizar um disco rígido virtual existente", escolhemos o pendrive e confirmamos.
   - Utilizando a plataforma Notepad++, criamos um código inicial boot.asm para ser utilizado em nossa máquina virtual, o código pode ser conferido nos diretórios deste repositório.
